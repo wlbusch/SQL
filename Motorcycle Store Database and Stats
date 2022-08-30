@@ -1,0 +1,15 @@
+--Create a motorcycle store database
+
+CREATE TABLE motorcycles (id INTEGER PRIMARY KEY, make TEXT, quantity INTEGER, cc INTEGER);
+INSERT INTO motorcycles VALUES (1, "HONDA", 4, 1500);
+INSERT INTO motorcycles VALUES (2, "YAMAHA", 2, 2500);
+INSERT INTO motorcycles VALUES (3, "HARLEY", 5, 1500);
+INSERT INTO motorcycles VALUES (4, "BMW", 4, 2500);
+
+--display the database ordered by make. 
+SELECT * FROM motorcycles
+ORDER BY make desc; 
+
+--what is the total number of motorcycles in the shop? 
+
+SELECT SUM(quantity) FROM motorcycles;
